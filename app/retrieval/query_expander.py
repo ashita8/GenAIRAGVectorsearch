@@ -1,4 +1,4 @@
-from mocks.vertexai_mock import GenerativeModel
+from app.mocks.vertexai_mock import GenerativeModel
 
 
 class QueryExpander:

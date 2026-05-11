@@ -1,7 +1,6 @@
-from embedding.embedder import Embedder
-from vectordb.faiss_store import FAISSVectorStore
-from retrieval.query_expander import QueryExpander
-
+from app.embedding.embedder import Embedder
+from app.vectordb.faiss_store import FAISSVectorStore
+from app.retrieval.query_expander import QueryExpander
 
 class Retriever:
     """

@@ -1,4 +1,4 @@
-from embedding.embedder import Embedder
+from app.embedding.embedder import Embedder
 
 
 class TextEmbeddingModel:
@@ -32,17 +32,23 @@ class GenerativeModel:
             "peak load":
                 "high traffic concurrent requests autoscaling load balancing scalability",
 
+            "traffic spikes":
+                "sudden increase in requests autoscaling queue handling",
+
+            "recover from failures":
+                "fault tolerance failover redundancy disaster recovery resilience backup",
+
+            "failures":
+                "system recovery failover redundancy resilience fault tolerance",
+
+            "communicate":
+                "message queues asynchronous communication event driven architecture",
+
             "slow response":
                 "latency performance bottleneck response time optimization",
 
-            "system failure":
-                "fault tolerance redundancy failover recovery resilience",
-
             "database issue":
-                "database replication consistency backup recovery scaling",
-
-            "traffic spike":
-                "sudden increase in requests autoscaling load balancer queue handling"
+                "database replication consistency backup recovery scaling"
         }
 
         expanded_query = query
