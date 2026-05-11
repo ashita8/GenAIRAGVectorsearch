@@ -1,22 +1,22 @@
 from embedding.embedder import Embedder
 from vectordb.faiss_store import FAISSVectorStore
+from retrieval.query_expander import QueryExpander
 
 
 class Retriever:
     """
-    Orchestrates embedding generation and vector retrieval.
+    Orchestrates embedding generation and retrieval.
     """
 
     def __init__(self):
 
         self.embedder = Embedder()
 
+        self.query_expander = QueryExpander()
+
         self.vector_store = None
 
     def ingest_documents(self, documents: list[str]):
-        """
-        Embed and store documents inside FAISS.
-        """
 
         print("Generating document embeddings...")
 
@@ -35,15 +35,27 @@ class Retriever:
 
         print(f"Ingested {len(documents)} documents")
 
-    def retrieve(self, query: str, top_k: int = 3):
-        """
-        Retrieve top matching documents for query.
-        """
+    def retrieve(
+        self,
+        query: str,
+        top_k: int = 3,
+        expand_query: bool = False
+    ):
 
         if self.vector_store is None:
             raise ValueError(
                 "Documents must be ingested before retrieval."
             )
+
+        original_query = query
+
+        # Strategy B
+        if expand_query:
+
+            query = self.query_expander.expand_query(query)
+
+            print("\nExpanded Query:")
+            print(query)
 
         query_embedding = self.embedder.embed_text(query)
 
@@ -52,4 +64,8 @@ class Retriever:
             top_k=top_k
         )
 
-        return results
+        return {
+            "original_query": original_query,
+            "used_query": query,
+            "results": results
+        }
