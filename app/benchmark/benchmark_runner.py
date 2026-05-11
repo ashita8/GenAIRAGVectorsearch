@@ -78,9 +78,15 @@ if __name__ == "__main__":
     print("FINAL BENCHMARK RESULTS")
     print("=" * 80)
 
-    print(
-        json.dumps(
-            results,
-            indent=4
-        )
+    formatted_results = json.dumps(
+        results,
+        indent=4
     )
+
+    print(formatted_results)
+
+    # Save benchmark output
+    with open("benchmark_output.json", "w") as file:
+        file.write(formatted_results)
+
+    print("\nbenchmark_output.json generated successfully")

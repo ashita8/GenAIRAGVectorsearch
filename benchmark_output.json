@@ -1,0 +1,113 @@
+[
+    {
+        "query": "How does the system handle peak load?",
+        "strategy_a": {
+            "used_query": "How does the system handle peak load?",
+            "results": [
+                {
+                    "score": 0.4293,
+                    "document": "\n    Kubernetes automatically scales application pods\n    during high traffic using Horizontal Pod Autoscaler.\n    This helps systems manage peak load efficiently.\n    "
+                },
+                {
+                    "score": 0.4113,
+                    "document": "\n    Load balancers distribute incoming traffic across\n    multiple servers to improve availability and reduce latency.\n    "
+                },
+                {
+                    "score": 0.3398,
+                    "document": "\n    Auto scaling policies dynamically provision new\n    compute resources when CPU or memory usage increases.\n    "
+                }
+            ]
+        },
+        "strategy_b": {
+            "used_query": "how does the system handle peak load? high traffic concurrent requests autoscaling load balancing scalability",
+            "results": [
+                {
+                    "score": 0.6164,
+                    "document": "\n    Load balancers distribute incoming traffic across\n    multiple servers to improve availability and reduce latency.\n    "
+                },
+                {
+                    "score": 0.5589,
+                    "document": "\n    Kubernetes automatically scales application pods\n    during high traffic using Horizontal Pod Autoscaler.\n    This helps systems manage peak load efficiently.\n    "
+                },
+                {
+                    "score": 0.4484,
+                    "document": "\n    Auto scaling policies dynamically provision new\n    compute resources when CPU or memory usage increases.\n    "
+                }
+            ]
+        }
+    },
+    {
+        "query": "How can the platform recover from failures?",
+        "strategy_a": {
+            "used_query": "How can the platform recover from failures?",
+            "results": [
+                {
+                    "score": 0.4207,
+                    "document": "\n    Monitoring systems collect infrastructure metrics,\n    logs, and traces to detect failures proactively.\n    "
+                },
+                {
+                    "score": 0.3709,
+                    "document": "\n    Database replication improves fault tolerance by\n    maintaining multiple synchronized copies of data.\n    "
+                },
+                {
+                    "score": 0.1472,
+                    "document": "\n    Distributed caching systems such as Redis reduce\n    database load and improve response times for frequent queries.\n    "
+                }
+            ]
+        },
+        "strategy_b": {
+            "used_query": "how can the platform recover from failures? fault tolerance failover redundancy disaster recovery resilience backup system recovery failover redundancy resilience fault tolerance",
+            "results": [
+                {
+                    "score": 0.5355,
+                    "document": "\n    Database replication improves fault tolerance by\n    maintaining multiple synchronized copies of data.\n    "
+                },
+                {
+                    "score": 0.4235,
+                    "document": "\n    Monitoring systems collect infrastructure metrics,\n    logs, and traces to detect failures proactively.\n    "
+                },
+                {
+                    "score": 0.2738,
+                    "document": "\n    Load balancers distribute incoming traffic across\n    multiple servers to improve availability and reduce latency.\n    "
+                }
+            ]
+        }
+    },
+    {
+        "query": "How do services communicate during traffic spikes?",
+        "strategy_a": {
+            "used_query": "How do services communicate during traffic spikes?",
+            "results": [
+                {
+                    "score": 0.6822,
+                    "document": "\n    Message queues help asynchronous communication between\n    microservices during traffic spikes.\n    "
+                },
+                {
+                    "score": 0.4033,
+                    "document": "\n    Monitoring systems collect infrastructure metrics,\n    logs, and traces to detect failures proactively.\n    "
+                },
+                {
+                    "score": 0.4026,
+                    "document": "\n    Load balancers distribute incoming traffic across\n    multiple servers to improve availability and reduce latency.\n    "
+                }
+            ]
+        },
+        "strategy_b": {
+            "used_query": "how do services communicate during traffic spikes? sudden increase in requests autoscaling queue handling message queues asynchronous communication event driven architecture",
+            "results": [
+                {
+                    "score": 0.8033,
+                    "document": "\n    Message queues help asynchronous communication between\n    microservices during traffic spikes.\n    "
+                },
+                {
+                    "score": 0.4194,
+                    "document": "\n    Load balancers distribute incoming traffic across\n    multiple servers to improve availability and reduce latency.\n    "
+                },
+                {
+                    "score": 0.4168,
+                    "document": "\n    Kubernetes automatically scales application pods\n    during high traffic using Horizontal Pod Autoscaler.\n    This helps systems manage peak load efficiently.\n    "
+                }
+            ]
+        }
+    }
+]
